@@ -13,6 +13,7 @@ A deployed example of the application is available here:
 👉 https://apacheta.projects.earthengine.app/view/compare-lct-hti
 
 The demo illustrates land degradation analysis based on land cover change for the computation of **SDG indicator 15.3.1**.
+<img width="1835" height="963" alt="image" src="https://github.com/user-attachments/assets/0ef3155d-20e8-45ad-b3d0-8baaa26010cf" />
 
 ---
 
