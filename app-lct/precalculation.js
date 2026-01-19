@@ -174,31 +174,7 @@ lcSources.forEach(function (source) {
             scale: source.lcScale
         });
 
-        // Only for MAPBIOMAS TEST ADDING FOREST LOSS            
-        if (source.initials === 'BIO') {
 
-            //  Degradation with forest loss adjusted
-            var lcDegradationLossAdjustedBand = 'lc_degradation_loss_adjusted_' + initialYear + '_' + finalYear; // name of the band: lc_degradation_loss_adjusted_1990_2018
-            var colDegLossAdjustedBaseName = 'lc_deg_' + source.initials + '_loss_adjusted_' + initialYear + '_' + finalYear; // base name of the column: lc_deg_loss_adjusted_BIO_2000_2015
-            var colDegLossAdjustedNames = [];
-
-            catValuesDeg.forEach(function (n) {
-                colDegLossAdjustedNames.push(colDegLossAdjustedBaseName + '_' + n); // final names for the columns: lc_deg_ESA_1990_2020_1 / 2 / 3
-            });
-
-            var imgRenamedLCDegradationWithForestLoss = source.imgLcTransitions.select(lcDegradationLossAdjustedBand)
-                .eq(catValuesDeg)
-                .rename(colDegLossAdjustedNames);
-
-            var imgAreaLCDegradationLossAdjusted = imgRenamedLCDegradationWithForestLoss.multiply(ee.Image.pixelArea()).divide(10000);
-            processList.push({
-                name: 'p_lc_degradation_loss_adjusted_' + source.initials + '_' + initialYear + '_' + finalYear,
-                image: imgAreaLCDegradationLossAdjusted,
-                reducer: ee.Reducer.sum(),
-                scale: source.lcScale
-            });
-
-        }
     });
 
 });
