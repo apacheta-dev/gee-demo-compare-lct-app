@@ -1,3 +1,5 @@
+<img width="1489" height="202" alt="logo-apacheta-pislm-wocat-gef" src="https://github.com/user-attachments/assets/769c7fba-9e0f-41bf-b362-1159fc42b53f" />
+
 # Land Cover Maps Comparison Tool - DEMO for Haiti
 
 This repository contains the source code for a **Google Earth Engine (GEE) App** designed to **analyze land degradation due to land cover change**, supporting the computation of **SDG indicator 15.3.1** (Proportion of land that is degraded over total land area).
